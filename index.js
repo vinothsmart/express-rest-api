@@ -3,9 +3,11 @@ const express = require("express");
 // set up express app
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   console.log("GET request to the homepage");
-  res.end();
+  res.send({
+    name: "John",
+  });
 });
 
 // listen for requests
