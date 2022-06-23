@@ -3,8 +3,9 @@ const express = require("express");
 // set up express app
 const app = express();
 
-app.get("/", () => {
+app.get("/", (req, res) => {
   console.log("GET request to the homepage");
+  res.end();
 });
 
 // listen for requests
